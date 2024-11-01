@@ -1,0 +1,208 @@
+/* Reset de Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* Navbar */
+header {
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ccc; /* Efeito hover para links da navbar */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Responsividade da Navbar */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none; /* Oculta o menu para telas menores */
+        flex-direction: column; /* Torna o menu vertical */
+        position: absolute;
+        background-color: #333;
+        width: 100%;
+        top: 60px; /* Ajuste de posição */
+    }
+
+    .navbar ul.active {
+        display: flex; /* Mostra o menu quando ativo */
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+/* Estilo da Tela de Login */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://ilhasmaldivas.com.br/wp-content/uploads/2021/10/ilhas-maldivas-post-refeicoes.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.login-box {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px 25px;
+    border-radius: 15px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.login-box h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.login-box input[type="email"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.login-box button:hover {
+    background-color: #555;
+}
+
+/* Estilo do Carrossel */
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+}
+
+.carousel-content {
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.carousel-content h2 {
+    font-size: 2rem;
+}
+
+.carousel-content p {
+    font-size: 1.1rem;
+}
+
+/* Responsividade do Carrossel */
+@media (max-width: 768px) {
+    .carousel {
+        height: 300px;
+    }
+    
+    .carousel-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .carousel-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Estilo da Listagem de Cursos */
+.courses-container {
+    padding: 40px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    width: 220px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Fallback para a Listagem de Cursos */
+@supports not (display: flex) {
+    .cards {
+        display: block;
+        text-align: center;
+    }
+
+    .card {
+        margin: 20px auto;
+        width: 90%;
+    }
+}
